@@ -1,5 +1,6 @@
 import 'package:finance_digest/core/const/assets.dart';
 import 'package:finance_digest/core/const/colors.dart';
+import 'package:finance_digest/src/presentation/home/home.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:permission_handler/permission_handler.dart';
@@ -59,8 +60,13 @@ class OnBoardingView extends StatelessWidget {
               right: 0,
               child: GestureDetector(
                 onTap: () async {
-                  final val = await Permission.notification.request();
-                  print(val);
+                  await Permission.notification.request();
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (cxt) => const HomePage(),
+                    ),
+                  );
                 },
                 child: Container(
                   padding: const EdgeInsets.symmetric(vertical: 12),

@@ -14,7 +14,6 @@ class NewsService {
       final response = await dio.get(
         NewsEP.getGeneralNews,
       );
-      print(response);
       return marketNewsListFromJson(jsonEncode(response.data));
     } on DioException catch (dioError) {
       throw BaseException(dioError.response?.data['error']);

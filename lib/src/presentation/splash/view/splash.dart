@@ -33,7 +33,7 @@ class _SplashViewState extends State<SplashView> {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (cxt) => const LoginPage(),
+            builder: (cxt) => const HomePage(),
           ),
         );
       } else {
