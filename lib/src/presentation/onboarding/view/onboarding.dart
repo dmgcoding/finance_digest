@@ -61,7 +61,7 @@ class OnBoardingView extends StatelessWidget {
               child: GestureDetector(
                 onTap: () async {
                   await Permission.notification.request();
-                  Navigator.push(
+                  Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
                       builder: (cxt) => const HomePage(),

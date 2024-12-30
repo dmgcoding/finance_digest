@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await loadFonts();
+  loadFonts();
   await initializeDependecies();
   runApp(const MyApp());
 }
